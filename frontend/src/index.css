@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-slate-50 text-slate-900 antialiased;
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+}
+
+@layer components {
+    .glass {
+        @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl;
+    }
+
+    .glass-dark {
+        @apply bg-slate-900/80 backdrop-blur-lg border border-slate-700/50 shadow-2xl;
+    }
+
+    .premium-card {
+        @apply bg-white rounded-[2rem] border border-slate-100 shadow-sm transition-all duration-500 hover:shadow-2xl hover:-translate-y-2;
+    }
+
+    .gradient-text {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-violet-600;
+    }
+
+    .btn-premium {
+        @apply px-8 py-4 rounded-2xl bg-slate-900 text-white font-black hover:bg-black transition-all duration-300 transform active:scale-95 shadow-lg shadow-slate-200;
+    }
+
+    .btn-glass {
+        @apply px-8 py-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold hover:bg-white/20 transition-all duration-300;
+    }
+}
+
+/* Custom Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}

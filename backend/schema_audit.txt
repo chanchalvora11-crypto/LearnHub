@@ -1,0 +1,6 @@
+Table [users]: id, name, email, password, role, created_at
+Table [courses]: id, title, description, instructor_id, category_id, price, rating, thumbnail_url, created_at
+Table [categories]: id, name
+Table [lessons]: id, course_id, title, content, order_number, video_url, duration
+Table [enrollments]: id, user_id, course_id, enrolled_at
+Table [payments]: id, user_id, course_id, amount, currency, status, method, transaction_ref, paid_at
